@@ -103,7 +103,7 @@ const Hero = () => {
         <Navbar />
             <Container>
                 <Left>
-                    <Title>"Pacience is Key When Troubleshooting."</Title>
+                    <Title>&rdquo;Pacience is Key When Troubleshooting.&rdquo;</Title>
                     <WhatWeDo>
                         <Line src="./img/line.png" />
                         <Subtitle>What we do</Subtitle>

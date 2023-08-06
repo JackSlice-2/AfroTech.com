@@ -147,7 +147,7 @@ const Hero = () => {
         <Navbar />
             <Container>
                 <Left>
-                    <Title>"Explore ."</Title>
+                    <Title>&ldquo;Explore .&rdquo;</Title>
                     <WhatWeDo>
                         <Line src="./img/line.png" />
                         <Subtitle>Documentations</Subtitle>
