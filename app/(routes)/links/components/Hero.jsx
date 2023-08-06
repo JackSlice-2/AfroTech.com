@@ -2,7 +2,17 @@
 
 import React from 'react'
 import { styled } from 'styled-components'
-import Navbar from './Navbar';
+import Navbar from '../../../components/Navbar';
+
+const data = [
+    "ReactJs",
+    "TailwindCss",
+    "Django",
+    "TypeScript",
+    "LinuxOS",
+    "Supabase",
+    'Prisma'
+];
 
 const Section = styled.div`
 height: 100vh;
@@ -71,49 +81,68 @@ bottom: 0;
 left: 0;
 right: 0;
 margin: auto;
-animation: animate 2s infinite ease alternate;
-
-@keyframes animate {
-    to{
-        transform: translateY(75px);
-    }
-}
 `;
-const ImgBall = styled.img`
-width: 160px;
-height: 80px;
-object-fit: contain;
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-animation: animate 1.5s infinite ease alternate;
-
-@keyframes animate {
-    to{
-        transform: translateY(20px);
-    }
-}
+const List = styled.ul`
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 20px;
 `;
+const ListItem = styled.li`
+font-size: 50px;
+font-weight: bold;
+cursor: pointer;
+color: transparent;
+-webkit-text-stroke: 1px white;
+position: relative;
+
+    &::after{
+        content: "${(props)=>props.text}";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: pink;
+        width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        &:hover {
+            &::after{
+                animation: moveText 0.5s linear both;
+
+                @keyframes moveText {
+                    to{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+`;
+
+
 const Hero = () => {
   return (
     <Section>
         <Navbar />
             <Container>
                 <Left>
-                    <Title>"Pacience is Key When Troubleshooting."</Title>
+                    <Title>"Explore ."</Title>
                     <WhatWeDo>
                         <Line src="./img/line.png" />
-                        <Subtitle>What we do</Subtitle>
+                        <Subtitle>Documentations</Subtitle>
                     </WhatWeDo>
-                    <Desc>We strive to create the simplest and most sofisticated UI for the best UE possible, in desktop, IOS & android applicatins.</Desc>
-                    <Button>Learn More</Button>
+                    <List>
+                {data.map((item) => (
+                    <ListItem key={item} text={item} onClick={()=>setWork(item)} >
+                        {item}
+                    </ListItem>
+                ))}
+                </List>
+                    <Button>More Links</Button>
                 </Left>
                 <Right>
-                    <Img src="./img/hacker.png"/>
-                    <ImgBall src="./img/Ball.png" />
+                    <Img src="./img/hacker2.png"/>
                 </Right>
             </Container>
     </Section>
