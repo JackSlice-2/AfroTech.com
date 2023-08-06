@@ -1,17 +1,18 @@
 'use client';
 
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import Navbar from '../../../components/Navbar';
+import LinkTable from './LinkTable';
+
 
 const data = [
     "ReactJs",
-    "TailwindCss",
-    "Django",
+    "CSS",
     "TypeScript",
-    "LinuxOS",
-    "Supabase",
-    'Prisma'
+    "Python",
+    "Databases",
+    "LinuxOS"
 ];
 
 const Section = styled.div`
@@ -78,9 +79,10 @@ object-fit: contain;
 position: absolute;
 top: 0;
 bottom: 0;
-left: 0;
+left: 1000;
 right: 0;
 margin: auto;
+z-index: 2;
 `;
 const List = styled.ul`
 list-style: none;
@@ -120,8 +122,26 @@ position: relative;
         }
 `;
 
+const TableWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -80;
+  width: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+`;
 
 const Hero = () => {
+    const [selectedWork, setSelectedWork] = useState(null);
+
+    const setWork = (item) => {
+      setSelectedWork(item);
+    };
   return (
     <Section>
         <Navbar />
@@ -143,7 +163,10 @@ const Hero = () => {
                 </Left>
                 <Right>
                     <Img src="./img/hacker2.png"/>
-                </Right>
+                    <TableWrapper>
+                      {selectedWork && <LinkTable selected={selectedWork} />}
+                    </TableWrapper>
+                    </Right>
             </Container>
     </Section>
   )
