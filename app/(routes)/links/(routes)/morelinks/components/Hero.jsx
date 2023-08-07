@@ -1,11 +1,8 @@
-'use client';
+"use client";
 
 import React, { useState } from 'react'
-import { styled, keyframes } from 'styled-components'
+import { styled } from 'styled-components'
 import Navbar from '../../../../../components/Navbar';
-import LinkTable from './LinkTable';
-import Link from 'next/link';
-
 
 const data = [
     "ReactJs",
@@ -80,7 +77,7 @@ object-fit: contain;
 position: absolute;
 top: 0;
 bottom: 0;
-left: 1000;
+left: 0;
 right: 0;
 margin: auto;
 z-index: 1;
@@ -94,7 +91,7 @@ const ImgWaves = styled.img`
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0; /* Corrected the value here */
+  left: 0;
   right: 0;
   margin: auto;
   z-index: 2;
@@ -127,7 +124,7 @@ color: gray;
 position: relative;
 
     &::after{
-        content: "${(props)=>props.text}";
+        content: "${(props)=> JSON.stringify(props.text)}";
         position: absolute;
         font-size: 60px;
         top: 0;
@@ -157,7 +154,7 @@ const TableWrapper = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  right: -80;
+  right: -80px;
   width: 50px;
   margin: auto;
   display: flex;
@@ -167,11 +164,6 @@ const TableWrapper = styled.div`
 `;
 
 const Hero = () => {
-    const [selectedWork, setSelectedWork] = useState(null);
-
-    const setWork = (item) => {
-      setSelectedWork(item);
-    };
   return (
     <Section>
         <Navbar />
@@ -179,27 +171,12 @@ const Hero = () => {
                 <Left>
                     <Title>&ldquo;Explore .&rdquo;</Title>
                     <WhatWeDo>
-                        <Line src="./img/line.png" />
+                        <Line src="./../img/line.png" />
                         <Subtitle>Documentations</Subtitle>
                     </WhatWeDo>
-                    <List>
-                {data.map((item) => (
-                    <ListItem key={item} onClick={()=>setWork(item)} >
-                        {item}
-                    </ListItem>
-                ))}
-                </List>
-                <Link href="/links/morelinks">
-                  <Button>More Links</Button>
-                </Link>
                 </Left>
                 <Right>
-                    <Img src="./img/hacker2.png"/>
-                    <ImgWaves src='./img/waves.png' />
-                    <TableWrapper>
-                      {selectedWork && <LinkTable selected={selectedWork} />}
-                    </TableWrapper>
-                    </Right>
+                </Right>
             </Container>
     </Section>
   )

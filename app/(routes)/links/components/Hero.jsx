@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react'
-import { styled, keyframes } from 'styled-components'
+import { styled } from 'styled-components'
 import Navbar from '../../../components/Navbar';
 import LinkTable from './LinkTable';
 import Link from 'next/link';
@@ -80,7 +80,7 @@ object-fit: contain;
 position: absolute;
 top: 0;
 bottom: 0;
-left: 1000px;
+left: 0;
 right: 0;
 margin: auto;
 z-index: 1;
