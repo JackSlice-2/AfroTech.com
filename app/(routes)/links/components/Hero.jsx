@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { styled, keyframes } from 'styled-components'
 import Navbar from '../../../components/Navbar';
 import LinkTable from './LinkTable';
+import Link from 'next/link';
 
 
 const data = [
@@ -188,7 +189,9 @@ const Hero = () => {
                     </ListItem>
                 ))}
                 </List>
+                  <Link href="/links/morelinks">
                     <Button>More Links</Button>
+                  </Link>    
                 </Left>
                 <Right>
                     <Img src="./img/hacker2.png"/>

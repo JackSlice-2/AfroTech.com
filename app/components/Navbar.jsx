@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import { styled } from 'styled-components'
+import { styled, keyframes } from 'styled-components'
 
 const Section = styled.div`
 justify-content: center;
@@ -18,8 +18,25 @@ display: flex;
 align-items: center;
 gap: 50px
 `;
+const spinAnimation = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+const glowAnimation = keyframes`
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+`;
 const Logo = styled.img`
-height: 50px;
+  height: 30px;
+  animation: ${spinAnimation} 5s linear infinite, ${glowAnimation} 2s ease-in-out infinite alternate;
 `;
 const List = styled.ul`
 display: flex;
@@ -46,12 +63,13 @@ border-radius: 5px;
 cursor: pointer;
 `;
 
+
 const Navbar = () => {
   return (
     <Section>
         <Container>
             <Links>
-                <Logo src="./img/logo.png" />
+                <Logo src="./img/Ball.png" />
                 <List>
                     <ListItem><a href="/">Home</a></ListItem>
                     <ListItem><a href="/links">Links</a></ListItem>
