@@ -54,7 +54,7 @@ position: relative;
 
         &:hover {
             &::after{
-                animation: moveText 0.5s linear both;
+                animation: move 0.5s linear both;
 
                 @keyframes moveText {
                     to{

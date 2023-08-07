@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react'
 import { styled, keyframes } from 'styled-components'
-import Navbar from '../../../components/Navbar';
+import Navbar from '../../../../../components/Navbar';
 import LinkTable from './LinkTable';
+import Link from 'next/link';
 
 
 const data = [
@@ -183,12 +184,14 @@ const Hero = () => {
                     </WhatWeDo>
                     <List>
                 {data.map((item) => (
-                    <ListItem key={item} text={item} onClick={()=>setWork(item)} >
+                    <ListItem key={item} onClick={()=>setWork(item)} >
                         {item}
                     </ListItem>
                 ))}
                 </List>
-                    <Button>More Links</Button>
+                <Link href="/links/morelinks">
+                  <Button>More Links</Button>
+                </Link>
                 </Left>
                 <Right>
                     <Img src="./img/hacker2.png"/>
