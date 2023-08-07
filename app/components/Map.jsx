@@ -26,7 +26,7 @@ const Map = () => {
         rotate: [55, 14, 0],
         scale: 1000
       }}
-      style={{width:"100%", height:"100%", text:"white"}}
+      style={{width:"100%", height:"100%"}}
     >
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
@@ -40,15 +40,14 @@ const Map = () => {
           ))
         }
       </Geographies>
-      {markers.map(({ name, coordinates, markerOffset }) => (
-        <Marker key={name} coordinates={coordinates}>
+      {markers.map(({ coordinates, markerOffset }) => (
+        <Marker coordinates={coordinates}>
           <circle r={5} fill="#F00" stroke="#fff" strokeWidth={2} />
           <text
             textAnchor="middle"
             y={markerOffset}
             style={{ fontFamily: "system-ui", fill: "#efeef5" }}
           >
-            {name}
           </text>
         </Marker>
       ))}

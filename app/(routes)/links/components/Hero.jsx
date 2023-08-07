@@ -80,7 +80,7 @@ object-fit: contain;
 position: absolute;
 top: 0;
 bottom: 0;
-left: 1000;
+left: 1000px;
 right: 0;
 margin: auto;
 z-index: 1;
@@ -127,7 +127,7 @@ color: gray;
 position: relative;
 
     &::after{
-        content: "${(props)=>props.text}";
+        content: "${(props)=> JSON.stringify(props.text)}";
         position: absolute;
         font-size: 60px;
         top: 0;
@@ -157,7 +157,7 @@ const TableWrapper = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  right: -80;
+  right: -80px;
   width: 50px;
   margin: auto;
   display: flex;
