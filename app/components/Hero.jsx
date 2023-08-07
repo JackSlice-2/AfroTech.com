@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { styled } from 'styled-components'
+import { styled, keyframes } from 'styled-components'
 import Navbar from './Navbar';
 
 const Section = styled.div`
@@ -79,24 +79,34 @@ animation: animate 2s infinite ease alternate;
     }
 }
 `;
-const ImgBall = styled.img`
-width: 160px;
-height: 80px;
-object-fit: contain;
-position: absolute;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-margin: auto;
-animation: animate 1.5s infinite ease alternate;
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
 
-@keyframes animate {
-    to{
-        transform: translateY(20px);
-    }
-}
+  to {
+    transform: rotate(360deg);
+  }
 `;
+const ImgBall = styled.img`
+  width: 160px;
+  height: 80px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: ${rotate} 5s linear infinite;
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
+
 const Hero = () => {
   return (
     <Section>
@@ -108,7 +118,7 @@ const Hero = () => {
                         <Line src="./img/line.png" />
                         <Subtitle>What we do</Subtitle>
                     </WhatWeDo>
-                    <Desc>We strive to create the simplest and most sofisticated UI for the best UE possible, in desktop, IOS & android applicatins.</Desc>
+                    <Desc>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</Desc>
                     <Button>Learn More</Button>
                 </Left>
                 <Right>

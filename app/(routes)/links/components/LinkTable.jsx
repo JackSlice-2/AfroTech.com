@@ -31,10 +31,9 @@ const TableCell = styled.td`
 `;
 
 const LinkTable = ({ selected }) => {
-  // Define different links based on the selected item
   const linksByItem = {
     ReactJs: [
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
+      { text: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
@@ -46,9 +45,9 @@ const LinkTable = ({ selected }) => {
       { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
     ],
     CSS: [
-      { text: 'CSS Documentation', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
-      { text: 'Tailwind CSS Documentation', url: 'https://CSS.com/docs' },
-      { text: 'Tailwind CSS Documentation', url: 'https://CSS.com/docs' },
+      { text: 'Classic CSS', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
+      { text: 'Styled Components', url: 'https://styled-components.com/docs/basics#installation' },
+      { text: 'Tailwind CSS', url: 'https://CSS.com/docs' },
     ],
     TypeScript: [
       { text: 'TypeScript Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
@@ -64,7 +63,6 @@ const LinkTable = ({ selected }) => {
     LinuxOS: [
        { text: 'Bash Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
     ],
-    // Add more items and links
   };
 
   const links = linksByItem[selected] || [];
@@ -74,8 +72,8 @@ const LinkTable = ({ selected }) => {
       <Table>
         <thead>
           <tr>
-            <TableHeader>Link Text</TableHeader>
-            <TableHeader>Link URL</TableHeader>
+            <TableHeader>Documentation Name</TableHeader>
+            <TableHeader>URL to Docs</TableHeader>
           </tr>
         </thead>
         <tbody>

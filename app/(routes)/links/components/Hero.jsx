@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react'
-import { styled } from 'styled-components'
+import { styled, keyframes } from 'styled-components'
 import Navbar from '../../../components/Navbar';
 import LinkTable from './LinkTable';
 
@@ -82,7 +82,34 @@ bottom: 0;
 left: 1000;
 right: 0;
 margin: auto;
-z-index: 2;
+z-index: 1;
+`;
+
+
+const ImgWaves = styled.img`
+  width: 1100px;
+  height: 850px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; /* Corrected the value here */
+  right: 0;
+  margin: auto;
+  z-index: 2;
+  animation: zoomEffect 5s infinite;
+  
+  @keyframes zoomEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 `;
 const List = styled.ul`
 list-style: none;
@@ -163,6 +190,7 @@ const Hero = () => {
                 </Left>
                 <Right>
                     <Img src="./img/hacker2.png"/>
+                    <ImgWaves src='./img/waves.png' />
                     <TableWrapper>
                       {selectedWork && <LinkTable selected={selectedWork} />}
                     </TableWrapper>

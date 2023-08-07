@@ -64,12 +64,16 @@ const Who = () => {
                 <Left>
                 </Left>
                 <Right>
-                <Title>Think. Make. Solve</Title>
+                <Title>Imagine.</Title>
+                <Title>Learn.</Title>
+                <Title> Solve.</Title>
                     <WhatWeDo>
                         <Line src="./img/line.png" />
-                        <Subtitle>What we do</Subtitle>
+                        <Subtitle>Difficult Takes a Day, Impossible Takes a Week</Subtitle>
                     </WhatWeDo>
-                    <Desc>We strive to create the simplest and most sofisticated software possible, for desktop, IOS & android.</Desc>
+                    <Desc>Before you, lies a relentless explorer with an affinity for unraveling the complexities of our modern world`s diverse software, 
+                      languages, and frameworks. A silent conqueror of uncharted realms, I thrive in the realm of perpetual learning, 
+                      turning the unknown into a sandbox of possibilities.</Desc>
                     <Button>Learn More</Button>
                 </Right>
             </Container>
