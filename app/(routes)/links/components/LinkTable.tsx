@@ -1,5 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+
+interface Link {
+  text: string;
+  url: string;
+}
+
+interface LinkTableProps {
+  selected: string | null;
+}
 
 const TableContainer = styled.div`
   display: flex;
@@ -30,8 +39,8 @@ const TableCell = styled.td`
   padding: 10px;
 `;
 
-const LinkTable = ({ selected }) => {
-  const linksByItem = {
+const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
+  const linksByItem: Record<string, Link[]> = {
     ReactJs: [
       { text: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
@@ -49,7 +58,12 @@ const LinkTable = ({ selected }) => {
       { text: 'Styled Components', url: 'https://styled-components.com/docs/basics#installation' },
       { text: 'Tailwind CSS', url: 'https://CSS.com/docs' },
     ],
-    TypeScript: [
+    JavaScript: [
+      { text: 'JavaScript', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'TypeScript', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'NodeJs', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'NPM', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'NVM', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'TypeScript Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
     ],
     Databases: [
@@ -65,7 +79,7 @@ const LinkTable = ({ selected }) => {
     ],
   };
 
-  const links = linksByItem[selected] || [];
+  const links: Link[] = selected ? linksByItem[selected] || [] : [];
 
   return (
     <TableContainer>

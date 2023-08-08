@@ -26,34 +26,6 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
 `;
-const Title = styled.h1`
-  font-size: 74px;
-`;
-const WhatWeDo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;
-const Line = styled.img`
-  height: 5px;
-`;
-const Subtitle = styled.h2`
-  color: pink;
-`;
-const Desc = styled.p`
-  font-size: 24px;
-  color: lightgray;
-`;
-const Button = styled.button`
-  background-color: darkblue;
-  color: white;
-  font-weight: 500;
-  width: 150px;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-`;
 
 const Right = styled.div`
   flex: 3;
@@ -111,13 +83,13 @@ const Hero: React.FC = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>&rdquo;Pacience is Key When Troubleshooting.&rdquo;</Title>
-          <WhatWeDo>
-            <Line src="./img/line.png" />
-            <Subtitle>What we do</Subtitle>
-          </WhatWeDo>
-          <Desc>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</Desc>
-          <Button>Learn More</Button>
+          <h1 className='text-6xl'>&rdquo;Pacience is Key When Troubleshooting.&rdquo;</h1>
+          <div className='display-flex align-items-center g-10'>
+            <img src="./img/line.png" className='h-1' />
+            <h2 className='text-pink-500'>What we do</h2>
+          </div>
+          <p className='font-medium text-gray-300'>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</p>
+          <button className="bg-blue-900 text-white font-medium w-36 py-2 rounded-lg cursor-pointer">Learn More</button>
         </Left>
         <Right>
           <Img src="./img/hacker.png"/>
