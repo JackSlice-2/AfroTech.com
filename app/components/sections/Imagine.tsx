@@ -88,7 +88,7 @@ const Who: React.FC = () => {
             <p className='text-pink-400'>Difficult Takes a Day, Impossible Takes a Week</p>
           </WhatWeDo>
           <Desc>
-            Before you, lies a relentless explorer with an affinity for unraveling the complexities of our modern world's diverse software,
+            Before you, lies a relentless explorer with an affinity for unraveling the complexities of our modern world&apos;s diverse software,
             languages, and frameworks. A silent conqueror of uncharted realms, I thrive in the realm of perpetual learning,
             turning the unknown into a sandbox of possibilities.
           </Desc>

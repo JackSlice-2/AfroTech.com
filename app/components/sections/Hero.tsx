@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
         <Left>
           <h1 className='text-6xl'>&rdquo;Pacience is Key When Troubleshooting.&rdquo;</h1>
           <WhatWeDo>
-            <img src="./img/line.png" className='h-1' />
+            <img src="./img/line.png" className='h-1' alt='line' />
             <h2 className='text-pink-400'>What we do</h2>
           </WhatWeDo>
           <p className='font-medium text-gray-300'>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</p>
