@@ -3,7 +3,7 @@
 import { styled } from "styled-components"
 import Contact from "./components/sections/Contact"
 import Hero from "./components/sections/Hero"
-import Who from "./components/sections/Who"
+import Who from "./components/sections/Imagine"
 import Works from "./components/sections/Works"
 
 const Container = styled.div`

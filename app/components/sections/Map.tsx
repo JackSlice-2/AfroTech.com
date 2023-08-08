@@ -41,8 +41,7 @@ const Map: React.FC = () => {
         }
       </Geographies>
       {markers.map(({ name, coordinates, markerOffset }) => (
-        <Marker key={name} coordinates={coordinates as [number, number]}> {/* Cast to tuple */}
-          {/* ... (other Marker contents) */}
+        <Marker key={name} coordinates={coordinates as [number, number]}>
         </Marker>
       ))}
       {markers.map(({ name, coordinates, markerOffset }) => (

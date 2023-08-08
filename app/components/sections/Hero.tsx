@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled, keyframes } from 'styled-components';
-import Navbar from '../Navbar';
+import Navbar from './../Navbar';
 
 const Section = styled.div`
   height: 100vh;
@@ -72,9 +72,14 @@ const ImgBall = styled.img`
 
   @keyframes animate {
     to {
-      transform: translateY(20px);
+      transform: translateY(35px);
     }
   }
+`;
+const WhatWeDo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 const Hero: React.FC = () => {
@@ -84,10 +89,10 @@ const Hero: React.FC = () => {
       <Container>
         <Left>
           <h1 className='text-6xl'>&rdquo;Pacience is Key When Troubleshooting.&rdquo;</h1>
-          <div className='display-flex align-items-center g-10'>
+          <WhatWeDo>
             <img src="./img/line.png" className='h-1' />
-            <h2 className='text-pink-500'>What we do</h2>
-          </div>
+            <h2 className='text-pink-400'>What we do</h2>
+          </WhatWeDo>
           <p className='font-medium text-gray-300'>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</p>
           <button className="bg-blue-900 text-white font-medium w-36 py-2 rounded-lg cursor-pointer">Learn More</button>
         </Left>
