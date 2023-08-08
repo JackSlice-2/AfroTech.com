@@ -69,10 +69,10 @@ const Navbar: React.FC = () => {
           <List>
             <ListItem><a href="/">Home</a></ListItem>
             <ListItem><a href="/links">Links</a></ListItem>
-            <ListItem>Tutorials</ListItem>
-            <ListItem>Projects</ListItem>
-            <ListItem>Apps</ListItem>
-            <ListItem>Games</ListItem>
+            <ListItem><a href='/tutorials'>Tutorials</a> </ListItem>
+            <ListItem><a href='/projects'>Projects</a></ListItem>
+            <ListItem><a href='/apps'>Apps</a></ListItem>
+            <ListItem><a href='/games'>Games</a></ListItem>
           </List>
         </Links>
         <Icons>

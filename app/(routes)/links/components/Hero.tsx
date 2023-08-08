@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Navbar from '../../../components/sections/Navbar';
+import Navbar from '../../../components/Navbar';
 import LinkTable from './LinkTable';
 import Link from 'next/link';
 
@@ -181,7 +181,7 @@ const Hero: React.FC = () => {
                             </ListItem>
                         ))}
                     </List>
-                    <Link href="/links/morelinks">
+                    <Link href="/morelinks">
                         <Button>More Links</Button>
                     </Link>
                 </Left>
