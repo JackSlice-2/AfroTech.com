@@ -77,11 +77,18 @@ const Navbar: React.FC = () => {
           </List>
         </Links>
         <Icons>
-          <GithubIcon><a href='https://github.com/JackSlice-2'></a></GithubIcon>
-          <LinkedinIcon><a href='https://www.linkedin.com/in/pc-nunes-8a26a2248/'></a></LinkedinIcon>  
-          <Icon src="./img/line.png" />
-          <Button>Hire Now</Button>
-        </Icons>
+      <button>
+        <a href='https://github.com/JackSlice-2'>
+          <GithubIcon /></a>
+        </button>
+      <button>
+        <a href='https://www.linkedin.com/in/pc-nunes-8a26a2248/'>
+          <LinkedinIcon /></a>
+        </button>
+      <Icon src="./img/line.png" />
+      <Button>Hire Now</Button>
+    </Icons>
+
       </Container>
     </Section>
   );

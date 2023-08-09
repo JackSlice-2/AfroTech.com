@@ -171,8 +171,8 @@ const Hero: React.FC = () => {
                             </ListItem>
                         ))}
                     </List>
-                    <Link href="/morelinks">
-                        <Button>More Links</Button>
+                    <Link href="/projects">
+                        <Button>More Projects</Button>
                     </Link>
                 </Left>
                 <Right>
