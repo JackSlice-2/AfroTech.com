@@ -1,3 +1,4 @@
+import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import React from 'react';
 import { styled, keyframes } from 'styled-components';
 
@@ -76,6 +77,8 @@ const Navbar: React.FC = () => {
           </List>
         </Links>
         <Icons>
+          <GithubIcon><a href='https://github.com/JackSlice-2'></a></GithubIcon>
+          <LinkedinIcon><a href='https://www.linkedin.com/in/pc-nunes-8a26a2248/'></a></LinkedinIcon>  
           <Icon src="./img/line.png" />
           <Button>Hire Now</Button>
         </Icons>

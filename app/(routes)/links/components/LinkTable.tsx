@@ -45,6 +45,8 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
       { text: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'NextJs', url: 'https://nextjs.org/docs' },
       { text: 'Shadcn/ui', url: 'https://ui.shadcn.com/' },
+      { text: 'Lucide', url: 'https://lucide.dev/' },
+
     ],
     CSS: [
       { text: 'Classic CSS', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
