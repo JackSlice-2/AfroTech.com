@@ -74,6 +74,7 @@ const Navbar: React.FC = () => {
             <ListItem><a href='/projects'>Projects</a></ListItem>
             <ListItem><a href='/apps'>Apps</a></ListItem>
             <ListItem><a href='/games'>Games</a></ListItem>
+            <ListItem><a href='/about'>About</a></ListItem>
           </List>
         </Links>
         <Icons>

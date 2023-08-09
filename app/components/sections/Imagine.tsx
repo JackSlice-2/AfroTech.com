@@ -92,7 +92,7 @@ const Who: React.FC = () => {
             languages, and frameworks. A silent conqueror of uncharted realms, I thrive in the realm of perpetual learning,
             turning the unknown into a sandbox of possibilities.
           </Desc>
-          <Button>More</Button>
+          <Button><a href='/tutorials' >More</a></Button>
         </Right>
       </Container>
     </Section>

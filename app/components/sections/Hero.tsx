@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
             <h2 className='text-pink-400'>What we do</h2>
           </WhatWeDo>
           <p className='font-medium text-gray-300'>We strive to create the most intuitive and sofisticated User Interface for the best User Experience, in Web, IOS & Android applications.</p>
-          <button className="bg-blue-900 text-white font-medium w-36 py-2 rounded-lg cursor-pointer">Learn More</button>
+          <button className="bg-blue-900 text-white font-medium w-36 py-2 rounded-lg cursor-pointer"><a href='/about'>Learn More</a></button>
         </Left>
         <Right>
           <Img src="./img/hacker.png"/>
