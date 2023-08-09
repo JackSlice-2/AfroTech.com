@@ -1,7 +1,7 @@
 "use client";
 
 import { styled } from "styled-components"
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
 
 const Container = styled.div`
 height: 100vh;

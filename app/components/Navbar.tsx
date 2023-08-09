@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
           <LinkedinIcon /></a>
         </button>
       <Icon src="./img/line.png" />
-      <Button>Hire Now</Button>
+      <Button><a href='/hirenow' >Hire Now</a></Button>
     </Icons>
 
       </Container>
