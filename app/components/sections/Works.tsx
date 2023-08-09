@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Pictures from '../Pictures';
@@ -85,7 +85,7 @@ const List = styled.ul`
     gap: 20px;
 `;
 const ListItem = styled.li<{ text: string }>`
-    font-size: 70px;
+    font-size: 80px;
     font-weight: bold;
     cursor: pointer;
     color: gray;
@@ -95,7 +95,7 @@ const ListItem = styled.li<{ text: string }>`
     &::after {
         content: "${(props) => props.text}";
         position: absolute;
-        font-size: 100px;
+        font-size: 80px;
         top: 0;
         left: 0;
         color: darkblue;
@@ -133,12 +133,28 @@ const TableWrapper = styled.div`
     z-index: 4;
 `;
 
+
 const Hero: React.FC = () => {
     const [selectedWork, setSelectedWork] = useState<string | null>(null);
 
     const setWork = (item: string) => {
         setSelectedWork(item);
     };
+
+    const handleDocumentClick = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        if (!data.includes(target.textContent || '')) {
+            setSelectedWork(null);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleDocumentClick);
+        return () => {
+            document.removeEventListener('click', handleDocumentClick);
+        };
+    }, []);
+
     return (
         <Section>
             <Container>

@@ -43,39 +43,35 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
   const linksByItem: Record<string, Link[]> = {
     ReactJs: [
       { text: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
-      { text: 'React Documentation', url: 'https://reactjs.org/docs/getting-started.html' },
+      { text: 'NextJs', url: 'https://nextjs.org/docs' },
+      { text: 'Shadcn/ui', url: 'https://ui.shadcn.com/' },
     ],
     CSS: [
       { text: 'Classic CSS', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
       { text: 'Styled Components', url: 'https://styled-components.com/docs/basics#installation' },
       { text: 'Tailwind CSS', url: 'https://CSS.com/docs' },
+      { text: 'Bootstrap', url: 'https://getbootstrap.com/' },
     ],
     JavaScript: [
-      { text: 'JavaScript', url: 'https://docs.djangoproject.com/en/3.2/' },
-      { text: 'TypeScript', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+      { text: 'TypeScript', url: 'https://www.typescriptlang.org/docs/' },
       { text: 'NodeJs', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'NPM', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'NVM', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'TypeScript Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
     ],
     Databases: [
-      { text: 'Supabase Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'Supabase', url: 'https://supabase.com/' },
       { text: 'Prisma Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'PlanetScale', url: 'https://planetscale.com/' },
     ],
     Python: [
         { text: 'Pyhton3.7 Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
         { text: 'Django Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
     ],
     LinuxOS: [
-       { text: 'Bash Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
+       { text: 'Linux Mint Commands', url: 'https://community.linuxmint.com/tutorial/view/244' },
+       { text: 'Bash Refrence Manual', url: 'https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html' },
     ],
   };
 
