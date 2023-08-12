@@ -51,7 +51,7 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
     CSS: [
       { text: 'Classic CSS', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
       { text: 'Styled Components', url: 'https://styled-components.com/docs/basics#installation' },
-      { text: 'Tailwind CSS', url: 'https://CSS.com/docs' },
+      { text: 'Tailwind CSS', url: 'https://v1.tailwindcss.com/docs/installation' },
       { text: 'Bootstrap', url: 'https://getbootstrap.com/' },
     ],
     JavaScript: [
@@ -60,11 +60,10 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
       { text: 'NodeJs', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'NPM', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'NVM', url: 'https://docs.djangoproject.com/en/3.2/' },
-      { text: 'TypeScript Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
     ],
     Databases: [
       { text: 'Supabase', url: 'https://supabase.com/' },
-      { text: 'Prisma Documentation', url: 'https://docs.djangoproject.com/en/3.2/' },
+      { text: 'Prisma DB', url: 'https://docs.djangoproject.com/en/3.2/' },
       { text: 'PlanetScale', url: 'https://planetscale.com/' },
     ],
     Python: [

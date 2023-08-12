@@ -2,6 +2,7 @@
 
 import { styled } from "styled-components"
 import Hero from "./components/Hero";
+import { TodoWrapperLocalStorage } from "./components/todo/TodoWrapperLocalStorage"
 
 const Container = styled.div`
 height: 100vh;
@@ -20,6 +21,7 @@ const App:React.FC = (props) => {
   return (
       <Container>
       <Hero />
+      <TodoWrapperLocalStorage />
       </Container>
   )
 }
