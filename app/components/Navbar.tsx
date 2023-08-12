@@ -17,25 +17,17 @@ const Links = styled.div`
   align-items: center;
   gap: 50px;
 `;
-const spinAnimation = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
 const glowAnimation = keyframes`
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
 `;
 const Logo = styled.img`
-  height: 30px;
-  animation: ${spinAnimation} 5s linear infinite, ${glowAnimation} 2s ease-in-out infinite alternate;
+  height: 90px;
+  animation: ${glowAnimation} 5s ease-in-out infinite alternate;
 `;
 const List = styled.ul`
   display: flex;
@@ -66,7 +58,7 @@ const Navbar: React.FC = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/Ball.png" />
+          <Logo src="./img/LogoWhite.png" />
           <List>
             <ListItem><a href="/">Home</a></ListItem>
             <ListItem><a href="/links">Links</a></ListItem>
