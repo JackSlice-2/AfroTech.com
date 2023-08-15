@@ -4,6 +4,10 @@ import { styled, keyframes } from 'styled-components';
 
 const Section = styled.div`
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Container = styled.div`
   width: 1400px;
@@ -11,6 +15,11 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 0px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 const Links = styled.div`
   display: flex;
@@ -32,8 +41,14 @@ const Logo = styled.img`
 const List = styled.ul`
   display: flex;
   gap: 20px;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  cursor: pointer;
+`;
 const Icons = styled.div`
   display: flex;
   align-items: center;
@@ -62,7 +77,7 @@ const Navbar: React.FC = () => {
           <List>
             <ListItem><a href="/">Home</a></ListItem>
             <ListItem><a href="/links">Links</a></ListItem>
-            <ListItem><a href='/tutorials'>Tutorials</a> </ListItem>
+            <ListItem><a href='/tutorials'>Tutorials</a></ListItem>
             <ListItem><a href='/projects'>Projects</a></ListItem>
             <ListItem><a href='/apps'>Apps</a></ListItem>
             <ListItem><a href='/games'>Games</a></ListItem>
