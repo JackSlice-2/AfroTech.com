@@ -11,10 +11,10 @@ const COLORS = {
 const MenuLabel = styled.label`
   position: fixed;
   top: -0.4rem;
-  right: 7rem;
+  right: 2.5rem;
   border-radius: 50%;
-  height: 3rem;
-  width: 2rem;
+  height: 0rem;
+  width: 5rem;
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);

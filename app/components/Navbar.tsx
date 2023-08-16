@@ -58,6 +58,7 @@ const Icons = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
+  width: 40%;
 `;
 const Icon = styled.img`
   width: 20px;
@@ -71,6 +72,11 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+
 `;
 
 const Navbar: React.FC = () => {
