@@ -38,7 +38,11 @@ const glowAnimation = keyframes`
 const Logo = styled.img`
   height: 90px;
   animation: ${glowAnimation} 5s ease-in-out infinite alternate;
-`;
+
+  @media only screen and (max-width: 768px) {
+    height: 70px
+  }
+  `;
 const List = styled.ul`
   display: flex;
   gap: 20px;

@@ -9,13 +9,12 @@ const COLORS = {
 };
 
 const MenuLabel = styled.label`
-  background-color: ${COLORS.primaryLight};
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: -0.4rem;
+  right: 7rem;
   border-radius: 50%;
-  height: 7rem;
-  width: 7rem;
+  height: 3rem;
+  width: 2rem;
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0 1rem 3rem rgba(182, 237, 200, 0.3);
@@ -47,6 +46,7 @@ const Icon = styled.img`
   display: inline-block;
   margin-top: 3.5rem;
 
+  
   &::before,
   &::after {
     content: "";
@@ -92,7 +92,7 @@ const Navigation = styled.nav`
 `;
 
 const List = styled.ul`
-  position: absolute;
+  position: relative;
   list-style: none;
   top: 50%;
   left: 50%;
