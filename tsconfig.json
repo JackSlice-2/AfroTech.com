@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/(routes)/links/components/Hero.jsx", "app/(routes)/links/components/LinkTable.jsx", "app/(routes)/links/components/Tools.jsx", "app/(routes)/links/components/Wrapper.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/(routes)/links/components/Hero.jsx", "app/(routes)/links/components/LinkTable.jsx", "app/(routes)/links/components/Tools.jsx", "app/(routes)/links/components/Wrapper.jsx", "app/(routes)/games/page.tsx"],
   "exclude": ["node_modules"]
 }

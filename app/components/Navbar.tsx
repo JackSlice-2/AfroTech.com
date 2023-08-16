@@ -1,6 +1,7 @@
 import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import React from 'react';
 import { styled, keyframes } from 'styled-components';
+import HamburgerMenu from "./MobileNav"
 
 const Section = styled.div`
   justify-content: center;
@@ -93,7 +94,9 @@ const Navbar: React.FC = () => {
         <a href='https://www.linkedin.com/in/pc-nunes-8a26a2248/'>
           <LinkedinIcon /></a>
         </button>
-      <Icon src="./img/line.png" />
+        <div className="block md:hidden text-sm p-2">  
+        <HamburgerMenu />
+        </div>
       <Button><a href='/hirenow' >Hire Now</a></Button>
     </Icons>
 
