@@ -56,7 +56,13 @@ const WhatWeDo = styled.div`
 const Line = styled.img`
   height: 5px;
 `;
+const Line2 = styled.img`
+  height: 5px;
 
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+`;
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
@@ -103,7 +109,10 @@ const Who: React.FC = () => {
           <Title> Solve.</Title>
           <WhatWeDo>
             <Line src="./img/line.png" alt="line" />
-            <p className='text-pink-400'>Difficult Takes a Day, Impossible Takes a Week</p>
+            <p className='text-pink-400'>Difficult Takes a Day</p>
+            <Line2 className="hidden" src="./img/line.png" alt="line" />
+            <p className='text-pink-400'>Impossible Takes a Week</p>
+            <Line2 className="hidden" src="./img/line.png" alt="line" />
           </WhatWeDo>
           <Desc>
             Before you, lies a relentless explorer with an affinity for unraveling the complexities of our modern world&apos;s diverse software,

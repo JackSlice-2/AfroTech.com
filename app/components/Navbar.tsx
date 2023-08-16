@@ -84,7 +84,10 @@ const Navbar: React.FC = () => {
     <Section>
       <Container>
         <Links>
-          <Logo src="./img/LogoWhite.png" />
+        <div>
+        <a href='/'><Logo src="./img/LogoWhite.png"/></a>
+        </div>
+
           <List>
             <ListItem><a href="/">Home</a></ListItem>
             <ListItem><a href="/links">Links</a></ListItem>

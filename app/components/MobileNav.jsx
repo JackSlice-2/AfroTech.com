@@ -9,9 +9,9 @@ const COLORS = {
 };
 
 const MenuLabel = styled.label`
-  position: fixed;
-  top: -0.4rem;
-  right: 2.5rem;
+  position: relative;
+  top: -1.7rem;
+  right: 0.4rem;
   border-radius: 50%;
   height: 0rem;
   width: 5rem;
@@ -141,38 +141,38 @@ function HamburgerMenu() {
       <Navigation clicked={click}>
         <List>
           <li>
-            <ItemLink onClick={handleClick} to="/">
-              Home
+            <ItemLink>
+              <a href="/">Home</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/links">
-              Links
+            <ItemLink>
+              <a href="/links">Links</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/tutorials">
-              Tutorials
+            <ItemLink>
+              <a href="/tutorials">Tutorials</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/projects">
-              Projects
+            <ItemLink>
+              <a href="/projects">Projects</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/apps">
-              Apps
+            <ItemLink>
+              <a href="/apps">Apps</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/games">
-              Games
+            <ItemLink>
+              <a href="/games">Games</a>
             </ItemLink>
           </li>
           <li>
-            <ItemLink onClick={handleClick} to="/about">
-              About
+            <ItemLink>
+              <a href="/about">About</a>
             </ItemLink>
           </li>
         </List>

@@ -16,7 +16,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  height:90vh;
+  height: 90vh;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
@@ -40,6 +40,7 @@ const Left = styled.div`
 
   @media only screen and (max-width: 768px) {
     flex: 1;
+    width: 100%;
     align-items: center;
     gap: 10px;
     top: 0px;
@@ -68,8 +69,8 @@ const Img = styled.img`
   animation: animate 2s infinite ease alternate;
 
   @media only screen and (max-width: 768px) {
-    width: 250px;
-    bottom: 150px;
+    width: 230px;
+    bottom: 160px;
   }
 
   @keyframes animate {
@@ -99,6 +100,12 @@ const ImgBall = styled.img`
   margin: auto;
   animation: ${rotate} 5s linear infinite;
 
+  @media only screen and (max-width: 768px) {
+    width: 120px;
+    height: 50px;
+    bottom: 55px;
+  }
+
   @keyframes animate {
     to {
       transform: translateY(35px);
@@ -118,12 +125,13 @@ const Line = styled.img`
 const H1 = styled.h1`
 @media only screen and (max-width: 768px) {
   text-align: center;
-
+  font-size: 40px;
+}
 `;
 
 const P = styled.p`
 @media only screen and (max-width: 768px) {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 `;
 

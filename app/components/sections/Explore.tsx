@@ -12,23 +12,24 @@ const data: string[] = [
 ];
 
 const Section = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px; /* Add padding for small screens */
 `;
 
 const Container = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: center;
-    width: 1400px;
+    max-width: 1400px; /* Change to max-width for responsiveness */
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
     @media only screen and (max-width: 768px) {
-        width: 100%;
         flex-direction: column;
     }
 `;
@@ -45,7 +46,11 @@ const Left = styled.div`
     }
 `;
 const Title = styled.h1`
-    font-size: 74px;
+    font-size: 48px; /* Adjust font size for smaller screens */
+
+    @media only screen and (max-width: 768px) {
+        font-size: 36px;
+    }
 `;
 const WhatWeDo = styled.div`
     display: flex;
@@ -92,9 +97,13 @@ const List = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media only screen and (max-width: 768px) {
+        gap: 0px
+    }
 `;
 const ListItem = styled.li<{ text: string }>`
-    font-size: 80px;
+    font-size: 60px; /* Adjust font size for smaller screens */
     font-weight: bold;
     cursor: pointer;
     color: gray;
@@ -102,7 +111,7 @@ const ListItem = styled.li<{ text: string }>`
     position: relative;
 
     @media only screen and (max-width: 768px) {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     &::after {
@@ -116,6 +125,10 @@ const ListItem = styled.li<{ text: string }>`
         overflow: hidden;
         white-space: nowrap;
         -webkit-text-stroke: 1px darkblue;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 30px;
+        }
     }
 
     &:hover {
