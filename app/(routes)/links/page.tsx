@@ -15,6 +15,10 @@ background: url("./img/bg.jpeg");
 &::-webkit-scrollbar{
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  overflow-x: hidden;
+}
 `;
 
 const App:React.FC = (props) => {

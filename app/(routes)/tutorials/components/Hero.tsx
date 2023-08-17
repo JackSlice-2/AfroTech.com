@@ -9,6 +9,11 @@ const Section = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+
+    @media only screen and (max-width: 768px) {
+        height: 120vh;
+      }
 `;
 
 const Container = styled.div`
@@ -17,6 +22,15 @@ const Container = styled.div`
     width: 1400px;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+      }
 `;
 
 const Left = styled.div`
