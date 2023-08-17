@@ -9,7 +9,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  height: 100%;
+  height: 100vh;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
@@ -17,10 +17,11 @@ const Container = styled.div`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 10px;
   }
 `;
 
@@ -33,7 +34,11 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 44px;
+
+  @media only screen and (max-width: 768px) {
+  font-size: 44px;
+  }
 `;
 
 const Right = styled.div`
@@ -55,17 +60,27 @@ const WhatWeDo = styled.div`
 `;
 const Line = styled.img`
   height: 5px;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  height: 3px;
+  }
 `;
 const Line2 = styled.img`
   height: 5px;
 
   @media only screen and (max-width: 768px) {
     display: block;
+  height: 3px;
   }
 `;
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 const Button = styled.button`
   background-color: darkblue;

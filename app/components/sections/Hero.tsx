@@ -11,12 +11,12 @@ const Section = styled.div`
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
-    height: 110vh;
+    height: 120vh;
   }
 `;
 
 const Container = styled.div`
-  height: 90vh;
+  height: 110vh;
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
@@ -27,7 +27,9 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
+    padding: 10px;
+
   }
 `;
 
@@ -69,8 +71,8 @@ const Img = styled.img`
   animation: animate 2s infinite ease alternate;
 
   @media only screen and (max-width: 768px) {
-    width: 230px;
-    bottom: 160px;
+    width: 150px;
+    bottom: 65px;
   }
 
   @keyframes animate {
@@ -101,9 +103,8 @@ const ImgBall = styled.img`
   animation: ${rotate} 5s linear infinite;
 
   @media only screen and (max-width: 768px) {
-    width: 120px;
-    height: 50px;
-    bottom: 55px;
+    height: 40px;
+    bottom: 20px;
   }
 
   @keyframes animate {

@@ -18,20 +18,34 @@ const Section = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px; /* Add padding for small screens */
+    padding: 0 20px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+      }
 `;
 
 const Container = styled.div`
     min-height: 100vh;
     scroll-snap-align: center;
-    max-width: 1400px; /* Change to max-width for responsiveness */
+    max-width: 1400px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
-    }
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 1000px;
+      }
+    
 `;
 
 const Left = styled.div`
@@ -43,22 +57,36 @@ const Left = styled.div`
 
     @media only screen and (max-width: 768px) {
         padding:20px;
+        height: 40%;
+        margin-top: 10px;
+        gap: 5px;
     }
 `;
 const Title = styled.h1`
     font-size: 48px; /* Adjust font size for smaller screens */
 
     @media only screen and (max-width: 768px) {
-        font-size: 36px;
+        font-size: 30px;
     }
 `;
 const WhatWeDo = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    
+    @media only screen and (max-width: 768px) {
+        font-size: 18px;
+        gap: 2px;
+    }
 `;
 const Line = styled.img`
     height: 5px;
+
+    @media only screen and (max-width: 768px) {
+        flex: 1;
+        width: 100%;
+        align-items: center;
+      }
 `;
 const Subtitle = styled.h2`
     color: pink;
@@ -78,6 +106,13 @@ const Button = styled.button`
 const Right = styled.div`
     flex: 3;
     position: relative;
+
+    @media only screen and (max-width: 768px) {
+    flex:3;
+    height:100%
+    width: 10%;
+  }
+    
 `;
 const Img = styled.img`
     width: 1100px;
@@ -90,6 +125,13 @@ const Img = styled.img`
     right: 0;
     margin: auto;
     z-index: 1;
+
+    @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 39%;
+    bottom: 25px;
+    right: 500px;
+    left: -420px;
 `;
 
 const List = styled.ul`
@@ -149,7 +191,7 @@ const TableWrapper = styled.div`
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0px;
+    right: 0;
     width: 1000px;
     height: 1000px;
     margin: auto;

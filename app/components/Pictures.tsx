@@ -18,9 +18,15 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   margin-bottom: 10px;
+  margin-right: 755px;
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 1000px;
+    width: 37%;  
+  }
 `;
 
 const Pictures: React.FC<PicturesProps> = ({ selected }) => {

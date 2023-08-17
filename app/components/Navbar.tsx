@@ -15,11 +15,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
+  padding: 5px 0px;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
   }
 `;
 const Links = styled.div`
@@ -40,7 +40,7 @@ const Logo = styled.img`
   animation: ${glowAnimation} 5s ease-in-out infinite alternate;
 
   @media only screen and (max-width: 768px) {
-    height: 70px
+    height: 50px
   }
   `;
 const List = styled.ul`
@@ -60,10 +60,7 @@ const Icons = styled.div`
   gap: 20px;
   width: 40%;
 `;
-const Icon = styled.img`
-  width: 20px;
-  cursor: pointer;
-`;
+
 const Button = styled.button`
   width: 100px;
   padding: 10px;

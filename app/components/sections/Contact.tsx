@@ -15,6 +15,16 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    gap: 1vh;
+  }
 `;
 
 const Left = styled.div`
@@ -24,7 +34,7 @@ const Left = styled.div`
   justify-content: flex-end;
  
   @media only screen and (max-width: 768px) {
-    padding: 20px;
+    padding: 0.5vh;
     width: 100%;
 }
 `;
@@ -38,6 +48,10 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  
+  @media only screen and (max-width: 768px) {
+   gap: 0.5vh;   
+  }
 `;
 
 const Input = styled.input`
@@ -45,6 +59,10 @@ const Input = styled.input`
   background-color: lightgray;
   border-radius: 5px;
   border: none;
+
+  @media only screen and (max-width: 768px) {
+   padding: 1vh;   
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -52,6 +70,10 @@ const TextArea = styled.textarea`
   border-radius: 5px;
   border: none;
   background-color: lightgray;
+
+  @media only screen and (max-width: 768px) {
+   padding: 1vh;   
+  }
 `;
 
 const Button = styled.button`
@@ -61,14 +83,14 @@ const Button = styled.button`
   padding: 20px;
   cursor: pointer;
   border-radius: 5px;
+
+  @media only screen and (max-width: 768px) {
+   padding: 1vh;   
+  }
 `;
 
 const Right = styled.div`
   flex: 1;
-
-  @media only screen and (max-width: 768px) {
-    display: hidden;
-}
 `;
 
 const Contact: React.FC = () => {
@@ -96,7 +118,7 @@ const Contact: React.FC = () => {
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Stationed in Brazil But We Offer Services Worldwide !</Title>
+            <Title>Stationed in Brazil But We Offer Services Worldwide!</Title>
             <Title>Contact Us</Title>
             <Input placeholder='name' name="name" />
             <Input placeholder='email' name="email" />
