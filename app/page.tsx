@@ -12,6 +12,7 @@ scroll-snap-type: y mandatory;
 scroll-behavior: smooth;
 overflow-y: auto;
 scrollbar-width: none;
+overflow-x: hidden;
 background: url("./img/bg.jpeg");
 &::-webkit-scrollbar{
   display: none;
@@ -24,7 +25,7 @@ background: url("./img/bg.jpeg");
 const App:React.FC = (props) => {
   return (
     <>
-      <Container className="h-screen overflow-y-auto scrollbar-none text-gray-300">
+      <Container className="h-screen overflow-y-auto overflow-x-hidden scrollbar-none text-gray-300 w-max-full">
       <Hero />
       <Who />
       <Works />

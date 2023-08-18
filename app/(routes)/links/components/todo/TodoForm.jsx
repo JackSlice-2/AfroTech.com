@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+
+const Button = styled.button`
+background-color: darkblue;
+color: white;
+font-weight: 500;
+width: 150px;
+padding: 5px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+`;
+
 export const TodoForm = ({ addTodo }) => {
   const [task, setTask] = useState('');
   const [url, setURL] = useState('');
@@ -15,17 +27,6 @@ export const TodoForm = ({ addTodo }) => {
       setDesc('');
     }
   };
-
-  const Button = styled.button`
-    background-color: darkblue;
-    color: white;
-    font-weight: 500;
-    width: 150px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-`;
 
   return (
     <form onSubmit={handleSubmit} className="TodoForm">
