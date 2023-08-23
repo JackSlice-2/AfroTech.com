@@ -44,9 +44,12 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
     ReactJs: [
       { text: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
       { text: 'NextJs', url: 'https://nextjs.org/docs' },
+      { text: 'Tailwind UI', url: 'https://tailwindui.com/documentation' },
       { text: 'Shadcn/ui', url: 'https://ui.shadcn.com/' },
       { text: 'Lucide', url: 'https://lucide.dev/' },
-
+      { text: 'React Native', url: 'https://reactnative.dev/docs/environment-setup' },
+      { text: 'Material UI', url: 'https://mui.com/' },
+      { text: 'Flowbite', url: 'https://flowbite.com/docs/getting-started/next-js/' },
     ],
     CSS: [
       { text: 'Classic CSS', url: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS' },
@@ -73,6 +76,7 @@ const LinkTable: React.FC<LinkTableProps> = ({ selected }) => {
     LinuxOS: [
        { text: 'Linux Mint Commands', url: 'https://community.linuxmint.com/tutorial/view/244' },
        { text: 'Bash Refrence Manual', url: 'https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html' },
+       { text: 'Kali Linux Documentation', url: 'https://www.kali.org/docs/' },
     ],
   };
 
