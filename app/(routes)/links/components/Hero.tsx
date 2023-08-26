@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Navbar from '../../../components/Navbar';
 import LinkTable from './LinkTable';
 import Link from 'next/link';
+import { StyleSheetManager } from 'styled-components';
+import isPropValid from '@emotion/is-prop-valid';
 
 const data: string[] = [
     "ReactJs",
@@ -178,6 +180,7 @@ const Hero: React.FC = () => {
         setSelectedWork(item);
     };
     return (
+        <StyleSheetManager shouldForwardProp={prop => isPropValid(prop)}>
         <Section>
             <Navbar />
             <Container>
@@ -207,6 +210,8 @@ const Hero: React.FC = () => {
                 </Right>
             </Container>
         </Section>
+        </StyleSheetManager>
+
     );
 };
 

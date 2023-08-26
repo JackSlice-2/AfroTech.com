@@ -105,8 +105,9 @@ const Navbar: React.FC = () => {
           <LinkedinIcon /></a>
         </button>
         <div className="block md:hidden text-sm p-2">  
-        {/* <HamburgerMenu /> */}
+        <HamburgerMenu />
         </div>
+
       <Button><a href='/hirenow' >Hire Now</a></Button>
     </Icons>
 

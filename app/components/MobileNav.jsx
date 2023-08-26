@@ -1,7 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { StyleSheetManager } from 'styled-components';
+import isPropValid from '@emotion/is-prop-valid';
+
 
 const COLORS = {
   primaryDark: "darkblue",
@@ -127,12 +131,22 @@ const ItemLink = styled.li`
 
 function HamburgerMenu() {
   const [click, setClick] = useState(false);
+  const [isMounted, setIsMounted] = useState(true); 
+
+  useEffect(() => {
+    setIsMounted(true);
+    return () => setIsMounted(false); 
+  }, []);
 
   const handleClick = () => {
-    setClick(!click);
+    if (isMounted) {
+      setClick(!click);
+    }
   };
+
   return (
     <>
+      <StyleSheetManager shouldForwardProp={prop => isPropValid(prop)}>
       <MenuLabel htmlFor="navi-toggle" onClick={handleClick}>
         <Icon clicked={click} src="./img/line.png" />
       </MenuLabel>
@@ -142,41 +156,42 @@ function HamburgerMenu() {
         <List>
           <li>
             <ItemLink>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/links">Links</a>
+              <Link href="/links">Links</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/tutorials">Tutorials</a>
+              <Link href="/tutorials">Tutorials</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/projects">Projects</a>
+              <Link href="/projects">Projects</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/apps">Apps</a>
+              <Link href="/apps">Apps</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/games">Games</a>
+              <Link href="/games">Games</Link>
             </ItemLink>
           </li>
           <li>
             <ItemLink>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </ItemLink>
           </li>
         </List>
       </Navigation>
+      </StyleSheetManager>
     </>
   );
 }
