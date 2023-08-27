@@ -10,22 +10,15 @@ interface PicturesProps {
   selected: string | null;
 }
 
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-`;
-
 const Image = styled.img`
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   margin-bottom: 10px;
   margin-right: 755px;
 
   @media only screen and (max-width: 768px) {
-    margin-right: 1000px;
-    width: 37%;  
+    margin-right: 1350px;
+    width: 30%;
   }
 `;
 
@@ -51,11 +44,11 @@ const Pictures: React.FC<PicturesProps> = ({ selected }) => {
   const images: Link[] = selected ? linksByItem[selected] || [] : [];
 
   return (
-    <ImageContainer>
+    <div className='display-flex flex-column align-center mt-50px'>
       {images.map((image, index) => (
         <Image key={index} src={image.url} alt={image.text} />
       ))}
-    </ImageContainer>
+    </div>
   );
 };
 

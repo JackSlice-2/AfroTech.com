@@ -91,6 +91,10 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  display: center;
+  align-items: center;
+  margin-top: 10%;
+  height: 100%;
 `;
 
 const Contact: React.FC = () => {

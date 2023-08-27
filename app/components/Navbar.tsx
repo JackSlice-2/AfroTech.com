@@ -10,6 +10,7 @@ const Section = styled.div`
     width: 100%;
   }
 `;
+
 const Container = styled.div`
   width: 1400px;
   display: flex;
@@ -22,11 +23,13 @@ const Container = styled.div`
     padding: 5px;
   }
 `;
+
 const Links = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
 `;
+
 const glowAnimation = keyframes`
   0%, 100% {
     opacity: 1;
@@ -35,6 +38,7 @@ const glowAnimation = keyframes`
     opacity: 0.2;
   }
 `;
+
 const Logo = styled.img`
   height: 90px;
   animation: ${glowAnimation} 5s ease-in-out infinite alternate;
@@ -43,7 +47,8 @@ const Logo = styled.img`
     height: 50px
   }
   `;
-const List = styled.ul`
+
+  const List = styled.ul`
   display: flex;
   gap: 20px;
 
@@ -51,9 +56,11 @@ const List = styled.ul`
     display: none;
   }
 `;
+
 const ListItem = styled.li`
   cursor: pointer;
 `;
+
 const Icons = styled.div`
   display: flex;
   align-items: center;
@@ -73,7 +80,6 @@ const Button = styled.button`
   @media only screen and (max-width: 768px) {
     display: none;
   }
-
 `;
 
 const Navbar: React.FC = () => {

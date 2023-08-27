@@ -8,7 +8,7 @@ import isPropValid from '@emotion/is-prop-valid';
 
 
 const COLORS = {
-  primaryDark: "darkblue",
+  primaryDark: "black",
   primaryLight: "blue",
 };
 
@@ -27,8 +27,8 @@ const MenuLabel = styled.label`
 
 const NavBackground = styled.div`
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 1.6rem;
+  right: 1.8rem;
   background-image: radial-gradient(
     ${COLORS.primaryDark},
     ${COLORS.primaryLight}
@@ -116,7 +116,7 @@ const ItemLink = styled.li`
     120deg,
     transparent 0%,
     transparent 50%,
-    #fff 50%
+    lightblue 70%
   );
   background-size: 240%;
   transition: all 0.4s;

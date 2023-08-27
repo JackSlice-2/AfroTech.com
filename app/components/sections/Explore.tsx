@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { StyleSheetManager } from 'styled-components';
 import Link from 'next/link';
 import Pictures from '../Pictures';
 
@@ -63,8 +63,8 @@ const Left = styled.div`
     }
 `;
 const Title = styled.h1`
-    font-size: 48px; /* Adjust font size for smaller screens */
-
+    font-size: 48px;
+    
     @media only screen and (max-width: 768px) {
         font-size: 30px;
     }
@@ -224,6 +224,7 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
+        <StyleSheetManager shouldForwardProp={(prop) => prop !== 'text'}>
         <Section>
             <Container>
                 <Left>
@@ -254,6 +255,8 @@ const Hero: React.FC = () => {
                 </Right>
             </Container>
         </Section>
+        </StyleSheetManager>
+
     );
 };
 
