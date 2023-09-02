@@ -6,7 +6,6 @@ import styled from "styled-components";
 import { StyleSheetManager } from 'styled-components';
 import isPropValid from '@emotion/is-prop-valid';
 
-
 const COLORS = {
   primaryDark: "black",
   primaryLight: "blue",

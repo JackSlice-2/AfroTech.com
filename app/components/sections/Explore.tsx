@@ -62,6 +62,7 @@ const Left = styled.div`
         gap: 5px;
     }
 `;
+
 const Title = styled.h1`
     font-size: 48px;
     
@@ -69,6 +70,7 @@ const Title = styled.h1`
         font-size: 30px;
     }
 `;
+
 const WhatWeDo = styled.div`
     display: flex;
     align-items: center;
@@ -79,6 +81,7 @@ const WhatWeDo = styled.div`
         gap: 2px;
     }
 `;
+
 const Line = styled.img`
     height: 5px;
 
@@ -88,6 +91,7 @@ const Line = styled.img`
         align-items: center;
       }
 `;
+
 const Subtitle = styled.h2`
     color: pink;
 `;
@@ -200,7 +204,6 @@ const TableWrapper = styled.div`
     justify-content: center;
     z-index: 4;
 `;
-
 
 const Hero: React.FC = () => {
     const [selectedWork, setSelectedWork] = useState<string | null>(null);
