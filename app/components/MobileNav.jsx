@@ -160,17 +160,7 @@ function HamburgerMenu() {
           </li>
           <li>
             <ItemLink>
-              <Link href="/links">Links</Link>
-            </ItemLink>
-          </li>
-          <li>
-            <ItemLink>
-              <Link href="/tutorials">Tutorials</Link>
-            </ItemLink>
-          </li>
-          <li>
-            <ItemLink>
-              <Link href="/projects">Projects</Link>
+              <Link href="/websites">Websites</Link>
             </ItemLink>
           </li>
           <li>
@@ -186,6 +176,11 @@ function HamburgerMenu() {
           <li>
             <ItemLink>
               <Link href="/about">About</Link>
+            </ItemLink>
+          </li>
+          <li>
+            <ItemLink>
+              <Link href="/hirenow">Hire Now!</Link>
             </ItemLink>
           </li>
         </List>

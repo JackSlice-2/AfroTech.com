@@ -1,8 +1,7 @@
 import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
 import { styled } from 'styled-components';
-import Map from "../Map"
-
+import Map from "./Map"
 
 const Section = styled.div`
   height: 100vh;

@@ -1,39 +1,39 @@
 "use client";
 
-import { styled } from "styled-components"
-import Contact from "./components/sections/Contact"
-import Hero from "./components/sections/Hero"
-import Who from "./components/sections/Imagine"
-import Works from "./components/sections/Explore"
+import Contact from "./components/home/Contact";
+import Hero from "./components/home/Hero";
+import Who from "./components/home/Imagine";
+import Works from "./components/home/Explore";
 
-const Container = styled.div`
-
-scroll-snap-type: y mandatory;
-scroll-behavior: smooth;
-overflow-y: auto;
-scrollbar-width: none;
-overflow-x: hidden;
-background: url("./img/bg.jpeg");
-&::-webkit-scrollbar{
-  display: none;
-}
-@media only screen and (max-width: 768px) {
-    overflow-x: hidden;
-}
-`;
-
-const App:React.FC = (props) => {
+const App: React.FC = (props) => {
   return (
     <>
-      <Container className="h-screen overflow-y-auto overflow-x-hidden scrollbar-none text-gray-300 w-max-full">
-      <Hero />
-      <Who />
-      <Works />
-      <Contact />
-      </Container>
+      <div
+        className="h-screen overflow-y-auto overflow-x-hidden
+       text-gray-300 w-max-full scroll-behavior-smooth"
+        style={{
+          backgroundImage: "url('./img/bg.jpeg')",
+          scrollSnapType: 'y mandatory',
+          WebkitOverflowScrolling: 'touch', // For smooth scrolling on iOS
+          scrollbarWidth: 'none', // For Firefox
+          msOverflowStyle: 'none', // For Internet Explorer
+          overflow: '-webkit-paged-x',
+        }}>
+        {/* For webkit-based browsers (Chrome and Safari) */}
+        <style>
+          {`::-webkit-scrollbar {
+              width: 0px;
+              height: 0px;
+            }
+          `}
+        </style>
+        <Hero />
+        <Who />
+        <Works />
+        <Contact />
+      </div>
     </>
-  )
-}
+  );
+};
 
-
-export default App
+export default App;

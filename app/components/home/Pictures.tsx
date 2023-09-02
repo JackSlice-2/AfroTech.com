@@ -25,19 +25,19 @@ const Image = styled.img`
 const Pictures: React.FC<PicturesProps> = ({ selected }) => {
   const linksByItem: Record<string, Link[]> = {
     FrontEnd: [
-      { text: 'React', url: './img/place4.png' },
+      { text: 'React', url: './img/Explore1.png' },
     ],
     BackEnd: [
-      { text: 'Classic BackEnd', url: './img/place1.png' },
+      { text: 'Classic BackEnd', url: './img/Explore2.png' },
     ],
     Design: [
-      { text: 'Design', url: './img/place2.png' },
+      { text: 'Design', url: './img/Explore3.png' },
     ],
     FullStack: [
-      { text: 'Supabase Documentation', url: './img/place3.png' },
+      { text: 'Supabase Documentation', url: './img/Explore4.png' },
     ],
     Python: [
-      { text: 'Python 3.7 Documentation', url: './img/place4.png' },
+      { text: 'Python 3.7 Documentation', url: './img/Explore5.png' },
     ],
   };
 

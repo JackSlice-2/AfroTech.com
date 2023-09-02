@@ -1,28 +1,31 @@
 "use client";
 
-import { styled } from "styled-components"
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
 
-const Container = styled.div`
-height: 100vh;
-scroll-snap-type: y mandatory;
-scroll-behavior: smooth;
-overflow-y: auto;
-scrollbar-width: none;
-color: white;
-background: url("./img/bg.jpeg");
-&::-webkit-scrollbar{
-  display: none;
-}
-`;
-
-const App:React.FC = (props) => {
+const App: React.FC = (props) => {
   return (
-      <Container>
+      <div
+        className="h-screen overflow-y-auto overflow-x-hidden
+       text-gray-300 w-max-full scroll-behavior-smooth"
+        style={{
+          backgroundImage: "url('./img/bg.jpeg')",
+          scrollSnapType: 'y mandatory',
+          WebkitOverflowScrolling: 'touch', // For smooth scrolling on iOS
+          scrollbarWidth: 'none', // For Firefox
+          msOverflowStyle: 'none', // For Internet Explorer
+          overflow: '-webkit-paged-x',
+        }}>
+        {/* For webkit-based browsers (Chrome and Safari) */}
+        <style>
+          {`::-webkit-scrollbar {
+              width: 0px;
+              height: 0px;
+            }
+          `}
+        </style>
       <Hero />
-      </Container>
-  )
+    </div>
+  );
 }
 
-
-export default App
+export default App;

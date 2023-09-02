@@ -34,7 +34,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 44px;
+  font-size: 80px;
 
   @media only screen and (max-width: 768px) {
   font-size: 44px;
