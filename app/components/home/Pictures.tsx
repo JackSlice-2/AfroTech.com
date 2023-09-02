@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 interface Link {
   text: string;
@@ -10,28 +9,16 @@ interface PicturesProps {
   selected: string | null;
 }
 
-const Image = styled.img`
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  margin-right: 755px;
-
-  @media only screen and (max-width: 768px) {
-    margin-right: 1350px;
-    width: 30%;
-  }
-`;
-
 const Pictures: React.FC<PicturesProps> = ({ selected }) => {
   const linksByItem: Record<string, Link[]> = {
-    FrontEnd: [
-      { text: 'React', url: './img/Explore1.png' },
+    "Intuitive Design": [
+      { text: 'Intuitive Designs', url: './img/Explore1.png' },
     ],
-    BackEnd: [
-      { text: 'Classic BackEnd', url: './img/Explore2.png' },
+    "Clean UE/UI": [
+      { text: 'Interactivity', url: './img/Explore2.png' },
     ],
-    Design: [
-      { text: 'Design', url: './img/Explore3.png' },
+    Interactivity: [
+      { text: 'Unique Layouts', url: './img/Explore3.png' },
     ],
     FullStack: [
       { text: 'Supabase Documentation', url: './img/Explore4.png' },
@@ -44,9 +31,20 @@ const Pictures: React.FC<PicturesProps> = ({ selected }) => {
   const images: Link[] = selected ? linksByItem[selected] || [] : [];
 
   return (
-    <div className='display-flex flex-column align-center mt-50px'>
+    <div className="flex flex-col items-center mt-10">
       {images.map((image, index) => (
-        <Image key={index} src={image.url} alt={image.text} />
+        <img
+          key={index}
+          src={image.url}
+          alt={image.text}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+            marginBottom: '10px',
+            marginRight: window.innerWidth <= 768 ? '1350px' : '755px',
+            width: window.innerWidth <= 768 ? '30%' : 'auto',
+          }}
+        />
       ))}
     </div>
   );

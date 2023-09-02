@@ -4,11 +4,12 @@ import Link from 'next/link';
 import Pictures from './Pictures';
 
 const data: string[] = [
-    "Intuitive Designs",
+    "Modern Design",
     "Clean UE/UI",
     "Interactivity",
     "Unique Layouts",
     "Fast & Secure",
+    "Responsive",
     "Hire Now"
 ];
 
@@ -143,14 +144,14 @@ const List = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 
     @media only screen and (max-width: 768px) {
         gap: 0px
     }
 `;
 const ListItem = styled.li<{ text: string }>`
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     color: gray;
@@ -164,7 +165,7 @@ const ListItem = styled.li<{ text: string }>`
     &::after {
         content: "${(props) => props.text}";
         position: absolute;
-        font-size: 80px;
+        font-size: 70px;
         top: 0;
         left: 0;
         color: darkblue;

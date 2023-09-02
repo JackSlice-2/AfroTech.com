@@ -4,23 +4,27 @@ import { styled, keyframes } from 'styled-components';
 import HamburgerMenu from "./MobileNav"
 
 const Section = styled.div`
-  justify-content: center;
+  width: 100%;
+  padding-left: 200px;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
+    padding-left: 0px;
   }
 `;
 
 const Container = styled.div`
   justify-content: space-between;
-  width: 1400px;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding: 5px 0px;
+  padding: 5px;
+  padding-left: 160px;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 5px;
+    padding-left: 0px;
   }
 `;
 
@@ -36,9 +40,12 @@ const glowAnimation = keyframes`
 const Logo = styled.img`
   height: 90px;
   animation: ${glowAnimation} 5s ease-in-out infinite alternate;
+  padding-right: 130px;
 
   @media only screen and (max-width: 768px) {
     height: 50px
+    padding-right: 0px;
+
   }
   `;
 
